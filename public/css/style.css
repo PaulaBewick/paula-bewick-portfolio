@@ -1,0 +1,32 @@
+body {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.wave-wrapper {
+  position: absolute;
+}
+
+canvas {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  opacity: 0.5;
+}
+
+svg {
+  fill: #fff;
+  margin-top: 15%;
+  width: 100vw;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 1;
+}

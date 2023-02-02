@@ -4,12 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paula Bewick</title>
+    <link href="vars/style.css" rel="stylesheet" />
+    <link href="theme.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Paula Bewick</h1>
-    <a href="./my-to-do-list/index.html">My To Do List</a>
-    <a href="./wesuckatgardening/index.html">We Suck At Gardening</a>
+    <div class="page-header">
+
+      <div class="gradient-wave">
+        <div class="wave-wrapper">
+          <canvas id="gradient-canvas" width="32" height="30">
+      
+        </div>
+        <div class="wave-wrapper">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 32H0V16s5.353 2.586 8.198 3.04c5.155.823 9.521-.91 15.604-.647 2.78.12 8.198 1.833 8.198 1.833Z" />
+          </svg>
+        </div>
+      </div>
+
+      <h1>Paula Bewick</h1>
+
+      <div class="project-links">
+        <a href="./my-to-do-list/index.html">My To Do List</a>
+        <a href="./wesuckatgardening/index.html">We Suck At Gardening</a>
+      </div>
+      <script src="theme.js"></script>
     <script src="app.js"></script>
     <script type="module">
       // Import the functions you need from the SDKs you need
