@@ -2,10 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Josefin+Sans:wght@100;200;400;700&display=swap');
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paula Bewick</title>
-    <link href="vars/style.css" rel="stylesheet" />
-    <link href="theme.css" rel="stylesheet" />
+    <link href="/css/css-variables/vars.css" rel="stylesheet" />
+    <link href="/css/css-variables/theme/theme.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
@@ -13,23 +16,69 @@
 
       <div class="gradient-wave">
         <div class="wave-wrapper">
-          <canvas id="gradient-canvas" width="32" height="30">
-      
+          <canvas id="gradient-canvas" width="32" height="30" aria-hidden="true" >
         </div>
         <div class="wave-wrapper">
-          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <svg class="svg-gradient" aria-hidden="true" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <path d="M32 32H0V16s5.353 2.586 8.198 3.04c5.155.823 9.521-.91 15.604-.647 2.78.12 8.198 1.833 8.198 1.833Z" />
           </svg>
         </div>
       </div>
 
-      <h1>Paula Bewick</h1>
+      <h1 class="home-title">Paula Bewick</h1>
+      <h2 class="home-sub-title">Passionate about aesthetics & accessibility.</h2>
 
-      <div class="project-links">
+    <div class="bounded-content">
+      <div class="flex-container">
+      <div class="flex-60"><p>
+        Lifelong Artist | Self Taught Dev | Former IT Brand Manager
+
+        I enjoy untangling the magic of technology to transform code into something beautiful. As a front-end developer, I use HTML, CSS, JavaScript, and SVG to conjure new solutions. My background is WordPress (8 years!) and my next horizon is learning Typescript and React/Next.js. 
+        </p>
+          <div class="button-container">
+            <label class="button-label" for="button">
+              <button type="button" class="btn gradient-button" href="https://www.linkedin.com/in/paulagbewick/">LinkedIn</button>
+            </label>
+          </div>
+          <div class="button-container">
+          <label class="button-label" for="button">
+            <button type="button" class="btn gradient-button" href="/pdfs/Paula Bewick Resume - 2023.pdf" download >Resume</button>
+          </label>
+        </div>
+        <div class="button-container">
+          <label class="button-label" for="button">
+            <a href="/pdfs/Paula Bewick Resume - 2023.pdf" download type="download" class="btn gradient-button" >Resume</a>
+          </label>
+        </div>
+      </div>
+      <div class="flex-30 quote"><p>
+        Any sufficiently advanced technology is indistinguishable from magic.
+
+        - Arthur C. Clarke
+        </p>
+
+        <div class="theme-toggle-button-container">
+          <label class="toggle-button-label" for="checkbox">
+            <input type="checkbox" class="toggle-button" id="checkbox" />
+            <div class="toggle-rounded"></div>
+          </label>
+        </div>
+      </div>
+    </div>
+        <!-- Strong interest in design, typography, branding, and all things visual. -->
+      <!-- <div class="project-links"><h3>Projects</h3>
         <a href="./my-to-do-list/index.html">My To Do List</a>
         <a href="./wesuckatgardening/index.html">We Suck At Gardening</a>
       </div>
-      <script src="theme.js"></script>
+      </div> -->
+              <!-- I've had the opportunity to learn from some amazing people along this journey, and I enjoy working both collaboratively and independently. -->       
+    </div>
+    <footer>
+      <div class="footer-content">
+        <p>© Paula Bewick 2023</p>
+      </div>
+    </footer>
+    <script src="/css/css-variables/theme/theme.js"></script>
     <script src="app.js"></script>
     <script type="module">
       // Import the functions you need from the SDKs you need

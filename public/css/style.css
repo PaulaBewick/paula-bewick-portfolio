@@ -19,8 +19,7 @@ canvas {
   opacity: 0.5;
 }
 
-svg {
-  fill: #fff;
+.svg-gradient {
   margin-top: 15%;
   width: 100vw;
   height: 100%;
@@ -28,5 +27,26 @@ svg {
   left: 50%;
   transform: translate(-50%, -50%);
   position: relative;
-  z-index: 1;
+  z-index: -5;
+}
+
+.home-title {
+  font-weight: 200;
+  padding: calc(0.5rem + 2.5vw) 0;
+  font-size: clamp(2.8rem, -0.8947rem + 12vw, 7rem);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.home-sub-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: calc(1.1rem + 0.5vw);
+}
+
+.quote p {
+  font-weight: 200;
+  font-size: calc(1.5rem + 0.5vw);
+  text-align: right;
 }
