@@ -1,7 +1,6 @@
 body {
   width: 100%;
   margin: 0;
-  overflow: hidden;
 }
 
 .wave-wrapper {
@@ -20,7 +19,7 @@ canvas {
 }
 
 .svg-gradient {
-  margin-top: 15%;
+  margin-top: calc(16% + 25px);
   width: 100vw;
   height: 100%;
   top: 50%;
@@ -30,7 +29,7 @@ canvas {
   z-index: -5;
 }
 
-.home-title {
+.hero-title {
   font-weight: 200;
   padding: calc(0.5rem + 2.5vw) 0;
   font-size: clamp(2.8rem, -0.8947rem + 12vw, 7rem);
@@ -38,15 +37,156 @@ canvas {
   text-transform: uppercase;
 }
 
-.home-sub-title {
+.hero-sub-title {
   text-transform: uppercase;
   text-align: center;
   font-weight: 500;
   font-size: calc(1.1rem + 0.5vw);
 }
 
+.project-page-title {
+  margin: 2rem;
+}
+
 .quote p {
   font-weight: 200;
   font-size: calc(1.5rem + 0.5vw);
   text-align: right;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+  width: fit-content;
+  font-weight: 500;
+  font-size: calc(1.1rem + 0.5vw);
+  margin: 1rem;
+  display: inline-block;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.section-title::before {
+  background-image: var(--simple-gradient);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+}
+
+.icon-grid {
+  padding: calc(0.5em + 0.5vw);
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3, minmax(1rem, 1fr));
+}
+
+.skill-title p {
+  margin: 0.5rem auto 2rem;
+}
+
+.skill-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5%;
+}
+
+.skill-title span:hover,
+.skill-title span:focus {
+  transform: scale(1.2);
+  color: var(--color-main-bright-transparent);
+}
+
+.skill-icon i {
+  font-size: 3rem;
+  display: inline-block;
+}
+
+.skill-icon i:hover,
+.skill-icon i:focus {
+  font-size: 3rem;
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease-in-out;
+  background-image: var(--simple-gradient);
+  background-size: 100%;
+}
+
+h3.project-name {
+  font-size: calc(1.2em + 0.3vw);
+  color: var(--primary-color);
+}
+
+.project-card {
+  display: flex;
+  margin: 0.5rem auto;
+}
+
+.project-image,
+.project-info {
+  max-width: 100%;
+  padding: calc(0.5em + 0.5vw);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 16.5px;
+  }
+  .svg-gradient {
+    margin-top: calc(20% + 25px);
+  }
+  .skill-title p {
+    color: var(--primary-color);
+  }
+  .project-card {
+    flex-direction: column;
+    margin: 1rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .icon-grid {
+    grid-template-columns: repeat(3, minmax(1rem, 1fr));
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .icon-grid {
+    grid-template-columns: repeat(4, minmax(1rem, 1fr));
+  }
+  .project-card:nth-of-type(even) {
+    flex-flow: row-reverse;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .icon-grid {
+    grid-template-columns: repeat(6, minmax(1rem, 1fr));
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+/* XXL devices (ultra-wide screens, 1600px and up) */
+@media only screen and (min-width: 1600px) {
+  .svg-gradient {
+    margin-top: 10%;
+  }
 }

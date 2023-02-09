@@ -196,7 +196,7 @@ figcaption {
 }
 
 .read-more-button:link {
-  color: var(--color-button-text);
+  color: var(--color-main-text);
 }
 
 .read-more-button:hover {

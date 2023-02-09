@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Project - Video Checkpointing</title>
+    <link rel="icon" type="image/x-icon" href="/svgs/icons/favicon.ico" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Josefin+Sans:wght@100;200;400;700&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link href="/css/css-variables/vars.css" rel="stylesheet" />
+    <link href="/css/css-variables/theme/theme.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="container-inner">
+          <a href="#" class="logo">Video Checkpointing</a>
+          <div class="theme-toggle-button-container">
+            <label class="toggle-button-label" for="switch">
+              <input
+                type="checkbox"
+                aria-label="theme toggle"
+                class="toggle-button"
+                id="switch"
+                name="theme"
+              />
+              <div class="toggle-rounded"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <article>
+      <h1 class="title project-page-title">Titan CMS Video Checkpointing</h1>
+      <div class="bounded-content">
+        <section>
+          <div class="content">
+            <div class="skills">
+              <h2 class="section-title">Skills</h2>
+              <ul class="icon-grid">
+                <li class="skill-title">
+                  <span class="skill-icon" aria-hidden="true"
+                    ><i class="devicon-html5-plain"></i
+                  ></span>
+                  <p>HTML</p>
+                </li>
+                <li class="skill-title">
+                  <span class="skill-icon" aria-hidden="true"
+                    ><i class="devicon-css3-plain"></i
+                  ></span>
+                  <p>CSS</p>
+                </li>
+                <li class="skill-title">
+                  <span class="skill-icon" aria-hidden="true">
+                    <i class="devicon-javascript-plain"></i
+                  ></span>
+                  <p>JavaScript</p>
+                </li>
+                <li class="skill-title">
+                  <span class="skill-icon" aria-hidden="true">
+                    <i class="devicon-vscode-plain"></i
+                  ></span>
+                  <p>VSCode</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="content">
+            <h2 class="section-title">Project Description</h2>
+            <div class="section-content">
+              <p>
+                During my internship at
+                <a href="https://www.nwsdigital.com/">Northwoods</a> I
+                collaborated with a back-end developer to create V1 of a new
+                video checkpointing tool for
+                <a href="https://titancms.com/">Titan CMS</a>. Throughout
+                development of the app, a primary focus was on avoiding breaking
+                changes in Titan. The goal was to ensure that the the app could
+                be easily deployed as part of other sites using the Titan CMS.
+                For this project I primarily used CSS and JavaScript, with
+                minimal changes to in HTML/XSL/Titan. I also worked solo and in
+                tandem with the back-end dev to test the app on a variety of
+                browsers and in a variety of scenarios. The application is now
+                in regular use in-house at Northwoods and will eventually be
+                released for use by Titan clients. This is a fully functional
+                CRUD app and is responsive and accessibile across devices.
+              </p>
+              <p>
+                This project included three primary components: a data editor
+                (add/edit video), data detail (watch video), data list (video
+                library) page. I developed the front end for all three and used
+                JavaScript to create additional functionality on the watch and
+                add/edit pages for better UI/UX.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="content">
+            <h2 class="section-title">Add/Edit Video - Data Editor</h2>
+            <div class="section-content">
+              <div class="project-figure">
+                <figure>
+                  <figcaption>Screen capture of Add/Edit Video</figcaption>
+                  <img
+                    src="/gifs/modal-dialog.gif"
+                    alt="Screen capture of Add Video"
+                  />
+                </figure>
+              </div>
+              <h3>Key Features & Challenges</h3>
+              <h4>Accessible Modal Forms</h4>
+              <p>
+                The modal forms provide core functionality for the checkpointing
+                tool and are used to add, edit, and delete checkpoint
+                information on the page for any number of checkpoints.
+                Generating the forms as modal dialogs required extensive work in
+                JavaScript since the forms are such a key part of the
+                application and tied to various functions. Furthermore, I wanted
+                to ensure that the modals were fully accessible to WCAG
+                standards. This meant implementing features such as
+                initial/returning focus, keyboard support and traps, appropriate
+                markup, hiding background window content, etc. I was able to
+                implement the modal form dialogs in a way that itegrated with
+                the exisiting code and did not disrupt the tool functionality.
+              </p>
+
+              <h4>Two-Way Timestamp Conversions</h4>
+              <p>
+                The timestamp functionality was also challenging, but was a
+                feature that I proposed and built to improve the user
+                experience. The video checkpointing tool uses time in seconds to
+                create/read/update/delete data as the user makes changes on the
+                page; therefore, the tool needs to save and read time in that
+                integer format. However, on longer videos timestamps in seconds
+                can become unwieldy for the user. I created javascript functions
+                that handle two-way time conversions in order to provide the
+                needed info to the tool while displaying a more readable format
+                to the user. Every time that the user sees a timestamp in a
+                modal form or in the video module, it is shown converted to a
+                string of M:SS, MM:SS, or H:MM:SS (I removed leading zeros with
+                a RegEx). However all page functionality for the editor still
+                works with time in seconds, and data is converted back and forth
+                as needed for application processes such as checkpoint updates.
+                I implemented my conversion functions and integrated them with
+                the existing JavaScript code to run at the appropriate times.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="content">
+            <h2 class="section-title">Watch Video - Data Detail</h2>
+            <div class="section-content">
+              <div class="project-figure">
+                <figure>
+                  <figcaption>Screen capture of Watch Video</figcaption>
+                  <img
+                    src="/gifs/toast.gif"
+                    alt="Screen capture of Watch Video"
+                  />
+                </figure>
+              </div>
+              <h3>Key Features & Challenges</h3>
+              <h4>Visual Scrolling</h4>
+              <p>
+                Visually scrolls the checkpoints as videos are played. This was
+                a UI/UX improvement that needed to be seamlessly integrated with
+                other functionality in order to work as intended.
+              </p>
+              <h4>Copy Buttons & "Toasts"</h4>
+              <p>
+                Expands the copy buttons on hover and provides a "toast" when a
+                checkpoint is copied. The challenge here was creating these
+                elements in a visually cohesive way while containing the
+                functionality to the video checkpointing module and working
+                within the Titan CMS framework.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="content">
+            <h2 class="section-title">Video Library - Data List</h2>
+            <div class="section-content">
+              <div class="project-figure">
+                <figure>
+                  <figcaption>Screen capture</figcaption>
+                  <img
+                    src="/gifs/toast.gif"
+                    alt="Screen capture of Watch Video"
+                  />
+                </figure>
+              </div>
+              <h3>Key Features & Challenges</h3>
+              <h4>Bug Fixes</h4>
+              <p>
+                The Video Library page design was kept simple since we expected
+                further changes once it was integrated into a site. However, in
+                working on this page, the back-end dev and I discovered the
+                source of a bug that I had noted in the Editor. I noticed that
+                certain info didn't update when edited, which then caused issues
+                with the page data not saving properly. While cross checking the
+                Editor page with the Video Library, we realized that it was a
+                small mismatch in our data configuration. We worked together to
+                determine the best fix for the issue, updated our respective
+                code to work in tandem, and then retested to confirm that the
+                bug was resolved. Throughout the development process we found
+                pair programming very valuable as a way to more quickly problem
+                solve. After all, two heads are better than one!
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+    <script src="/css/css-variables/theme/theme.js"></script>
+    <!-- <script src="app.js"></script> -->
+  </body>
+</html>

@@ -2,80 +2,370 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Josefin+Sans:wght@100;200;400;700&display=swap');
-    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Paula Bewick</title>
+    <link rel="icon" type="image/x-icon" href="/svgs/icons/favicon.ico" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Josefin+Sans:wght@100;200;400;700&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link
+      href="https://file.myfontastic.com/amxAknQdcSarhzdi3rtvKW/icons.css"
+      rel="stylesheet"
+    />
     <link href="/css/css-variables/vars.css" rel="stylesheet" />
     <link href="/css/css-variables/theme/theme.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
+    <a
+      id="skipID"
+      class="skip-to-content-link page-nav-anchor-link"
+      tabindex="0"
+      href="#main-content"
+      >Skip to Content</a
+    >
     <div class="page-header">
-
       <div class="gradient-wave">
         <div class="wave-wrapper">
-          <canvas id="gradient-canvas" width="32" height="30" aria-hidden="true" >
+          <canvas
+            id="gradient-canvas"
+            width="32"
+            height="30"
+            aria-hidden="true"
+          >
+          </canvas>
         </div>
         <div class="wave-wrapper">
-          <svg class="svg-gradient" aria-hidden="true" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M32 32H0V16s5.353 2.586 8.198 3.04c5.155.823 9.521-.91 15.604-.647 2.78.12 8.198 1.833 8.198 1.833Z" />
+          <svg
+            class="svg-gradient"
+            aria-hidden="true"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M32 32H0V16s5.353 2.586 8.198 3.04c5.155.823 9.521-.91 15.604-.647 2.78.12 8.198 1.833 8.198 1.833Z"
+            />
           </svg>
         </div>
       </div>
 
-      <h1 class="home-title">Paula Bewick</h1>
-      <h2 class="home-sub-title">Passionate about aesthetics & accessibility.</h2>
-
+      <h1 class="hero-title">Paula Bewick</h1>
+      <h2 class="hero-sub-title">
+        Passionate about aesthetics & accessibility
+      </h2>
+    </div>
+    <div class="spacer"></div>
     <div class="bounded-content">
       <div class="flex-container">
-      <div class="flex-60"><p>
-        Lifelong Artist | Self Taught Dev | Former IT Brand Manager
-
-        I enjoy untangling the magic of technology to transform code into something beautiful. As a front-end developer, I use HTML, CSS, JavaScript, and SVG to conjure new solutions. My background is WordPress (8 years!) and my next horizon is learning Typescript and React/Next.js. 
-        </p>
-          <div class="button-container">
-            <label class="button-label" for="button">
-              <button type="button" class="btn gradient-button" href="https://www.linkedin.com/in/paulagbewick/">LinkedIn</button>
+        <div class="flex-60">
+          <p>
+            Lifelong Artist | Self Taught Dev | Former IT Brand Manager
+            <br /><br />
+            I enjoy untangling the magic of technology to transform code into
+            something beautiful. As a front-end developer, I use HTML, CSS,
+            JavaScript, and SVG to conjure new solutions. My background is
+            WordPress (8 years!) and my next horizon is learning Typescript and
+            React/Next.js.
+          </p>
+          <span class="link-container">
+            <a
+              href="https://www.linkedin.com/in/paulagbewick/"
+              target="_blank"
+              class="gradient-link"
+              ><svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6.683 2.667h4.01l5.307 5.333 -5.307 5.333h-4.01l5.307 -5.333 -5.307 -5.333zm-6.683 10.667h4.01l5.307 -5.333 -5.307 -5.333h-4.01l5.307 5.333 -5.307 5.333z"
+                />
+              </svg>
+              LinkedIn</a
+            >
+          </span>
+          <span class="link-container">
+            <a
+              href="/pdfs/Paula-Bewick-Resume-2023.pdf"
+              download
+              type="download"
+              class="gradient-link"
+              ><svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6.683 2.667h4.01l5.307 5.333 -5.307 5.333h-4.01l5.307 -5.333 -5.307 -5.333zm-6.683 10.667h4.01l5.307 -5.333 -5.307 -5.333h-4.01l5.307 5.333 -5.307 5.333z"
+                />
+              </svg>
+              Resume</a
+            >
+          </span>
+        </div>
+        <div class="flex-30 quote">
+          <p>
+            Any sufficiently advanced technology is indistinguishable from
+            magic.
+            <br /><br />
+            - Arthur C. Clarke
+          </p>
+          <div class="theme-toggle-button-container">
+            <label class="toggle-button-label" for="switch">
+              <input
+                type="checkbox"
+                aria-label="theme toggle"
+                class="toggle-button"
+                id="switch"
+                name="theme"
+              />
+              <span class="toggle-rounded"></span>
             </label>
           </div>
-          <div class="button-container">
-          <label class="button-label" for="button">
-            <button type="button" class="btn gradient-button" href="/pdfs/Paula Bewick Resume - 2023.pdf" download >Resume</button>
-          </label>
-        </div>
-        <div class="button-container">
-          <label class="button-label" for="button">
-            <a href="/pdfs/Paula Bewick Resume - 2023.pdf" download type="download" class="btn gradient-button" >Resume</a>
-          </label>
         </div>
       </div>
-      <div class="flex-30 quote"><p>
-        Any sufficiently advanced technology is indistinguishable from magic.
+      <div class="spacer"></div>
+      <section>
+        <div class="skills">
+          <h2 class="section-title">Skills</h2>
 
-        - Arthur C. Clarke
-        </p>
-
-        <div class="theme-toggle-button-container">
-          <label class="toggle-button-label" for="checkbox">
-            <input type="checkbox" class="toggle-button" id="checkbox" />
-            <div class="toggle-rounded"></div>
-          </label>
+          <ul class="icon-grid reveal fade-bottom">
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true"
+                ><i class="devicon-html5-plain"></i
+              ></span>
+              <p>HTML</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true"
+                ><i class="devicon-css3-plain"></i
+              ></span>
+              <p>CSS</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-javascript-plain"></i
+              ></span>
+              <p>JavaScript</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-wordpress-plain"></i
+              ></span>
+              <p>WordPress</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="icon-rest-api"></i
+              ></span>
+              <p>RESTful API</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-vscode-plain"></i
+              ></span>
+              <p>VSCode</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="icon-accessibility"></i
+              ></span>
+              <p>Accessible Design</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-git-plain"></i
+              ></span>
+              <p>Git</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-inkscape-plain"></i
+              ></span>
+              <p>Inkscape</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-illustrator-plain"></i
+              ></span>
+              <p>Illustrator</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-photoshop-plain"></i
+              ></span>
+              <p>PhotoShop</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-figma-plain"></i
+              ></span>
+              <p>Figma</p>
+            </li>
+            <!-- <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-codepen-plain"></i
+              ></span>
+              <p>CodePen</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-github-original"></i
+              ></span>
+              <p>GitHub</p>
+            </li> -->
+          </ul>
+          <p class="flex-centered">
+            Always learning! Here's what I am currently working on.
+          </p>
+          <ul class="flex-centered reveal fade-bottom">
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-typescript-plain"></i
+              ></span>
+              <p>TypeScript</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-react-original"></i>
+              </span>
+              <p>React</p>
+            </li>
+            <li class="skill-title">
+              <span class="skill-icon" aria-hidden="true">
+                <i class="devicon-nextjs-original"></i>
+              </span>
+              <p>Next.js</p>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
-        <!-- Strong interest in design, typography, branding, and all things visual. -->
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <div class="projects">
+          <h2 class="section-title">Projects</h2>
+
+          <div class="project-card flex-container">
+            <div class="project-info flex-50 reveal fade-bottom fade-left">
+              <h3 class="project-name">Intranet Home</h3>
+              <p class="project-description">
+                Home page for Northwoods intranet based on supplied prototype.
+                Made using HTML, CSS, and JavaScript. Responsive across devices.
+              </p>
+              <p>
+                <a
+                  href="/intranet-home.html"
+                  class="link gradient-underline-link"
+                  >Project Info</a
+                >
+              </p>
+            </div>
+            <div class="project-info flex-50 reveal fade-bottom fade-right">
+              <a href="/intranet-home.html" title="Intranet Home"
+                ><img
+                  class="project-image"
+                  src="/images/laptop-intranet.png"
+                  alt="screen capture of intranet home page"
+              /></a>
+            </div>
+          </div>
+
+          <div class="project-card flex-container">
+            <div class="project-info flex-50 reveal fade-bottom fade-right">
+              <h3 class="project-name">Video Checkpointing Tool</h3>
+              <p class="project-description">
+                Video checkpointing tool built for Titan CMS. Made using HTML,
+                CSS, XSL, and JavaScript. Fully functional CRUD app created in
+                collaboration with back-end developer. Responsive and
+                accessibile across devices.
+              </p>
+              <p>
+                <a
+                  href="/video-checkpointing.html"
+                  class="link gradient-underline-link"
+                  >Project Info</a
+                >
+              </p>
+            </div>
+            <div class="project-info flex-50 reveal fade-bottom fade-left">
+              <a
+                href="/video-checkpointing.html"
+                title="Video Checkpointing Tool"
+                ><img
+                  class="project-image"
+                  src="/images/laptop-vc.png"
+                  alt="screen capture of video checkpointing tool"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Strong interest in design, typography, branding, and all things visual. -->
       <!-- <div class="project-links"><h3>Projects</h3>
-        <a href="./my-to-do-list/index.html">My To Do List</a>
-        <a href="./wesuckatgardening/index.html">We Suck At Gardening</a>
-      </div>
-      </div> -->
-              <!-- I've had the opportunity to learn from some amazing people along this journey, and I enjoy working both collaboratively and independently. -->       
+          <a href="./my-to-do-list/index.html">My To Do List</a>
+          <a href="./wesuckatgardening/index.html">We Suck At Gardening</a>
+        </div>
+        Visual “eye” for breaking down a “comp” into its individual UI components in order to articulate the implementation details when requested. 
+        </div> -->
+      <!-- I've had the opportunity to learn from some amazing people along this journey, and I enjoy working both collaboratively and independently. -->
     </div>
     <footer>
+      <a href="#skipID" class="page-nav-anchor-link">Go to Top</a>
       <div class="footer-content">
-        <p>© Paula Bewick 2023</p>
+        <div class="footer-links">
+          <div class="link-container">
+            <a
+              href="https://www.linkedin.com/in/paulagbewick/"
+              target="_blank"
+              class="social-link"
+              title="LinkedIn"
+              ><img
+                class="icon"
+                src="/svgs/icons/linkedin-basic.svg"
+                alt="LinkedIn logo link"
+            /></a>
+          </div>
+
+          <div class="link-container">
+            <a
+              href="https://github.com/PaulaBewick"
+              target="_blank"
+              class="social-link"
+              title="GitHub"
+              ><img
+                class="icon"
+                src="/svgs/icons/github-basic.svg"
+                alt="GitHub logo link"
+            /></a>
+          </div>
+
+          <div class="link-container">
+            <a
+              href="https://codepen.io/PaulaBewick/"
+              target="_blank"
+              class="social-link"
+              title="CodePen"
+              ><img
+                class="icon"
+                src="/svgs/icons/codepen-basic.svg"
+                alt="CodePen logo link"
+            /></a>
+          </div>
+        </div>
+        <p class="footer-copyright">© Paula Bewick 2023</p>
       </div>
     </footer>
     <script src="/css/css-variables/theme/theme.js"></script>
@@ -86,7 +376,6 @@
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
       // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
-
       // Your web app's Firebase configuration
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       const firebaseConfig = {
@@ -98,7 +387,6 @@
         appId: "1:235711392441:web:bc2e4539ab399a37134968",
         measurementId: "G-JQKWXSZ58F",
       };
-
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);

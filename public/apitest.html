@@ -27,95 +27,80 @@
     <article>
       <div class="container">
         <h1 class="title">API Demo</h1>
-        <div class="info">
-          <div class="tags">
-            <span>#html</span>
-            <span>#css</span>
-            <span>#js</span>
-            <span>#api</span>
-          </div>
-        </div>
+
         <div class="content">
-          <p>here is a form</p>
-          <form id="api-form" class="small-form">
-            <!-- <div class="control">
-              <label for="name">Name</label
-              ><input
-                name="nameentry"
-                id="name"
-                maxlength="20"
-                type="text"
-                value="name"
-              />
-            </div> -->
-            <!-- <div class="control">
-              <label for="myinput">My Input</label
-              ><input id="myinput" type="text" value="add your input" />
-            </div> -->
-            <!-- <fieldset>
-              <legend>Radio</legend>
-              <div class="control">
-                <input id="radio1" name="myradio" type="radio" /><label
-                  for="radio_1"
-                  >Radio 1</label
-                >
-              </div>
-              <div class="control">
-                <input id="radio1" name="myradio" type="radio" /><label
-                  for="radio_2"
-                  >Radio 2</label
-                >
-              </div>
-            </fieldset> -->
-            <!-- <fieldset>
-              <legend>Genre Preference</legend>
-              <div class="control">
-                <input id="genre_hiphop" type="checkbox" /><label
-                  for="genre_hiphop"
-                  >Hip Hop</label
-                >
-              </div>
-              <div class="control">
-                <input id="genre_edm" type="checkbox" /><label for="genre_edm"
-                  >EDM</label
-                >
-              </div>
-              <div class="control">
-                <input id="genre_salsa" type="checkbox" /><label
-                  for="genre_salsa"
-                  >Salsa</label
-                >
-              </div>
-            </fieldset>
+          <form>
             <div class="control">
-              <label for="age_group">Age Group</label
-              ><select id="age_group">
-                <option>0 to 9 Years</option>
-                <option>10 to 19 Years</option>
-                <option>20 to 29 Years</option>
-                <option>30 to 39 Years</option>
-                <option>40 to 49 Years</option>
-                <option>50 to 59 Years</option>
-                <option>60 to 69 Years</option>
-                <option>70 to 79 Years</option>
-                <option>80 to 89 Years</option>
-                <option>90 to 99 Years</option>
+              <label for="month">Month</label>
+              <select required name="month" id="month">
+                <option value="" disabled selected hidden>Select Date</option>
+
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>Jun</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
               </select>
-            </div> -->
-            <!-- <div class="control">
-              <input id="accept_agbs" type="checkbox" /><label for="accept_agbs"
-                >I accept the terms and conditions</label
-              >
-            </div> -->
-            <div class="button-container">
-              <div class="control btn primary">
-                <button type="submit">Submit</button>
-              </div>
-              <div class="control btn primary">
-                <button disabled="">Cancel</button>
-              </div>
+            </div>
+
+            <div class="control">
+              <label for="month">Day</label>
+              <select required name="day" id="day">
+                <option value="" disabled selected hidden>Select Date</option>
+
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+              </select>
             </div>
           </form>
+
+          <section class="title-section">
+            <h2 id="title"></h2>
+            <p id="date"></p>
+            <small style="display: block" id="copyright"></small>
+          </section>
+
+          <section id="media-section"></section>
+
+          <div class="description-div">
+            <p id="description"></p>
+          </div>
         </div>
       </div>
     </article>
