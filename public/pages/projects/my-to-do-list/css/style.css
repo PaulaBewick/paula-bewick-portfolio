@@ -1,0 +1,324 @@
+/* @import "https://fonts.googleapis.com/css?family=Lato:400,700"; */
+
+:root.light {
+  /* Light theme */
+  --color-main-accent: #b6cbde;
+  --main-btns: #70587c;
+  --main-btns-hover: #b66eda;
+  --color-secondary-accent: #c7e5ed;
+  --color-ternary-accent: #ede6ea;
+  --color-dark-button: #15587f;
+  --color-light-button: #4d8fa7;
+  --color-button-text: #fff;
+  --color-main-text: #0b1026;
+  --color-contrast-text: #19355c;
+  --container: #d8dbe0;
+  --background: #ede6ea;
+  --input-color: #fff;
+}
+
+:root.dark {
+  /* Dark theme */
+  --color-main-accent: #242b4b;
+  --main-btns: #70587c;
+  --main-btns-hover: #b66eda;
+  --color-secondary-accent: #102849;
+  --color-ternary-accent: #0b1026;
+  --color-dark-button: #15587f;
+  --color-button-text: #fff;
+  --color-light-button: #4d8fa7;
+  --color-main-text: #fff;
+  --color-contrast-text: #c4e8f5;
+  --container: #161b36;
+  --background: #0b1026;
+  --input-color: #fff;
+}
+
+:root.aesthetic {
+  /* Aesthetic theme */
+  --color-main-accent: #aed0ff;
+  --main-btns: #ab71eb;
+  --main-btns-hover: #8671e1;
+  --color-secondary-accent: #ecd1ff;
+  --color-ternary-accent: #b8c0ff;
+  --color-dark-button: #15587f;
+  --color-light-button: #4d8fa7;
+  --color-button-text: #fff;
+  --color-main-text: #404fa0;
+  --color-contrast-text: #ab71eb;
+  --container: #c8b6ff;
+  --background: #1e2240;
+  --input-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Century Gothic", "Helvetica", sans-serif;
+  line-height: 1.5;
+  padding: 0 0 40px 0;
+  background-color: var(--background);
+  margin: 0;
+  padding-top: 3em;
+}
+
+.wrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--container);
+  margin: 0 auto;
+  box-shadow: 0 10px 22px -15px #2e397e;
+}
+header {
+  text-align: center;
+  padding: 2.5em 1em;
+  background-color: var(--color-main-accent);
+  color: var(--color-main-text);
+}
+header h1 {
+  font-size: 2.5em;
+  line-height: 1;
+  margin: 0 0 0.65em;
+  font-variant-caps: all-small-caps;
+}
+.select-theme-prompt {
+  text-align: center;
+  font-size: x-large;
+  letter-spacing: 3px;
+  color: var(--color-contrast-text);
+}
+.motivation-snippet {
+  font-size: 2.5em;
+  line-height: 0;
+  color: var(--color-contrast-text);
+  /* margin: 0 0 0.65em; */
+  display: flex;
+  justify-content: center;
+}
+
+.add-name {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.btn-add-name {
+  background-color: var(--color-dark-button);
+  color: var(--color-button-text);
+  border-color: var(--color-dark-button);
+}
+.add-task-area {
+  display: flex;
+  justify-content: center;
+}
+.user-info-area {
+  flex-direction: column;
+  margin: 0;
+}
+.dark-mode-area {
+  margin: 2em 2em;
+}
+.list-container {
+  padding: 0.65em 2em 2em;
+}
+
+ul {
+  font-size: 1.15em;
+  padding: 0;
+  margin: 0 0 1.15em;
+  list-style: none;
+}
+li {
+  padding: 1.15em 0.5em;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 3px var(--color-main-accent);
+  color: var(--color-main-text);
+}
+li:last-child {
+  border: none;
+}
+
+Form Controls input:focus,
+button:focus {
+  outline: none;
+}
+label {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+input {
+  font-size: 1.15em;
+  width: 70%;
+  padding: 0.5em 1em;
+  background-color: var(--background);
+  border: 3px solid var(--main-btns);
+  color: var(--color-contrast-text);
+}
+.input-create-task {
+  background-color: var(--background);
+}
+.input-add-name {
+  border-color: var(--color-dark-button);
+}
+input:focus {
+  border: solid 2px var(--color-ternary-accent);
+}
+button {
+  color: var(--color-button-text);
+  font-size: 1em;
+  padding: 1em;
+  background-color: var(--color-dark-button);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--color-light-button);
+}
+/* button:focus {
+  outline: solid 3px var(--color-main-text);
+  outline-offset: -3px;
+} */
+
+.btn-toggle {
+  background-color: var(--color-dark-button);
+}
+.btn-toggle:hover {
+  background-color: var(--color-light-button);
+}
+/* .accent-buttons:hover {
+  background-color: var(--main-btns);
+} */
+.btn-remove {
+  color: var(--color-button-text);
+  background-color: var(--main-btns);
+}
+.btn-create-task {
+  font-size: 2em;
+  padding: 0.2em;
+}
+
+li input[type="checkbox"],
+li button {
+  width: auto;
+  margin-left: auto;
+}
+li button {
+  font-size: 0.9rem;
+  padding: 0.65em 0.85em;
+  background-color: var(--color-main-accent);
+}
+/* .btn-remove:focus,
+li button:focus {
+  outline-color: var(--color-main-accent);
+} */
+/* .btn-remove:hover,
+li button:hover {
+  background-color: var(--color-light-button);
+  color: var(--color-button-text);
+} */
+
+.theme-button-icons {
+  width: 4em;
+  height: 4em;
+}
+
+.theme-buttons {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.theme-btn {
+  margin: auto 1em;
+  border-radius: 50%;
+  /* border: solid 2px var(--color-button-text); */
+}
+
+.light-btn:hover {
+  background-color: #d8dbe0;
+}
+
+.aesthetic-btn:hover {
+  background-color: #c8b6ff;
+}
+
+.dark-btn:hover {
+  background-color: #102849;
+}
+
+.accent-buttons {
+  background-color: var(--main-btns);
+}
+.accent-buttons:hover {
+  background-color: var(--main-btns-hover);
+}
+/* Additional styles */
+.selected {
+  color: var(--color-main-accent);
+  transition: color 0.2s ease-in-out;
+}
+.grow {
+  font-size: 4.8rem;
+  transition: font-size 0.8s ease-in-out;
+}
+
+@media screen and (min-width: 720px) {
+  .wrapper {
+    max-width: 1000px;
+    width: 60%;
+  }
+  input {
+    width: 50%;
+  }
+}
+
+/* automatically load dark theme if user system prefers it */
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  :root.dark {
+    --color-main-accent: #242b4b;
+    --main-btns: #70587c;
+    --main-btns-hover: #b66eda;
+    --color-secondary-accent: #102849;
+    --color-ternary-accent: #0b1026;
+    --color-dark-button: #15587f;
+    --color-button-text: #fff;
+    --color-light-button: #4d8fa7;
+    --color-main-text: #fff;
+    --color-contrast-text: #c4e8f5;
+    --container: #161b36;
+    --background: #0b1026;
+    --input-color: #fff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root,
+  :root.light {
+    --color-main-accent: #b6cbde;
+    --main-btns: #70587c;
+    --main-btns-hover: #b66eda;
+    --color-secondary-accent: #c7e5ed;
+    --color-ternary-accent: #ede6ea;
+    --color-dark-button: #15587f;
+    --color-light-button: #4d8fa7;
+    --color-button-text: #fff;
+    --color-main-text: #0b1026;
+    --color-contrast-text: #19355c;
+    --container: #d8dbe0;
+    --background: #ede6ea;
+    --input-color: #fff;
+  }
+}

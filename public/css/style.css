@@ -1,14 +1,9 @@
-body {
-  width: 100%;
-  margin: 0;
-}
-
-.wave-wrapper {
-  position: absolute;
+.hidden {
+  display: none;
 }
 
 canvas {
-  width: 100vw;
+  width: 110%;
   height: 100%;
   position: relative;
   top: 50%;
@@ -19,8 +14,7 @@ canvas {
 }
 
 .svg-gradient {
-  margin-top: calc(16% + 25px);
-  width: 100vw;
+  width: 100%;
   height: 100%;
   top: 50%;
   left: 50%;
@@ -29,12 +23,22 @@ canvas {
   z-index: -5;
 }
 
+.page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2%;
+}
+
 .hero-title {
   font-weight: 200;
   padding: calc(0.5rem + 2.5vw) 0;
   font-size: clamp(2.8rem, -0.8947rem + 12vw, 7rem);
   text-align: center;
   text-transform: uppercase;
+  padding: 2% 0 0;
+  margin: 2rem 0 1rem;
 }
 
 .hero-sub-title {
@@ -42,6 +46,7 @@ canvas {
   text-align: center;
   font-weight: 500;
   font-size: calc(1.1rem + 0.5vw);
+  margin: 0.5rem 1.5rem;
 }
 
 .project-page-title {
@@ -139,13 +144,20 @@ h3.project-name {
   padding: calc(0.5em + 0.5vw);
 }
 
+/* Mini devices (phones, 345px and down) */
+@media only screen and (max-width: 345px) {
+  .hero-title {
+    font-size: 40px;
+  }
+  .hero-sub-title {
+    margin: 0;
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   html {
     font-size: 16.5px;
-  }
-  .svg-gradient {
-    margin-top: calc(20% + 25px);
   }
   .skill-title p {
     color: var(--primary-color);
@@ -153,6 +165,10 @@ h3.project-name {
   .project-card {
     flex-direction: column;
     margin: 1rem;
+  }
+  .page-header,
+  .hero-title {
+    padding: 0;
   }
 }
 
@@ -186,7 +202,4 @@ h3.project-name {
 
 /* XXL devices (ultra-wide screens, 1600px and up) */
 @media only screen and (min-width: 1600px) {
-  .svg-gradient {
-    margin-top: 10%;
-  }
 }
