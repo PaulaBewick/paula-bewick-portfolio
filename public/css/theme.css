@@ -32,7 +32,8 @@
     --primary-color: #004f6b;
     --secondary-color: #1a8199;
     --font-color: #1a1a1a;
-    --bg-color: #e9e7ea;
+    /* --bg-color: #e9e7ea; */
+    --bg-color: #fff;
     --heading-color: #1a8199;
   }
 }
