@@ -232,7 +232,7 @@ page-header {
 .theme-toggle-button-container {
   display: flex;
   align-items: center;
-  float: inline-end;
+  float: right;
 }
 
 .toggle-rounded .material-icons {
