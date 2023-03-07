@@ -590,9 +590,9 @@ footer {
   position: absolute;
   left: -9999px;
   z-index: 999;
-  padding: 1rem;
-  background-color: var(--bg-color);
-  color: var(--font-color);
+  /* padding: 1rem; */
+  /* background-color: var(--bg-color); */
+  /* color: var(--font-color); */
   opacity: 0;
   text-align: center;
   width: 15rem;

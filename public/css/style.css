@@ -145,7 +145,12 @@ h3.project-name {
 .project-image,
 .project-info {
   max-width: 100%;
+  height: auto;
   padding: calc(0.5em + 0.5vw);
+}
+
+.project-info p {
+  margin: 0;
 }
 
 /* Mini devices (phones, 345px and down) */
@@ -168,7 +173,7 @@ h3.project-name {
   }
   .project-card {
     flex-direction: column;
-    margin: 1rem;
+    /* margin: 1rem; */
   }
   .page-header,
   .hero-title {
