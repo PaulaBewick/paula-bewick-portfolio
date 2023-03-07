@@ -1,0 +1,28 @@
+{
+  "short_name": "Paula Bewick",
+  "name": "Paula Bewick: Front-End Dev",
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#7edbed",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "assets/svgs/icons/sparkle/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/svgs/icons/sparkle/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/svgs/icons/sparkle/maskable_icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

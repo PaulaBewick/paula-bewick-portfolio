@@ -14,8 +14,8 @@
       @import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Josefin+Sans:wght@100;200;400;700&display=swap");
     </style>
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
     />
     <link
       rel="stylesheet"
@@ -42,7 +42,9 @@
                 id="switch"
                 name="theme"
               />
-              <div class="toggle-rounded"></div>
+              <span class="toggle-rounded">
+                <span class="material-icons"> brightness_5 </span>
+              </span>
             </label>
           </div>
         </div>
@@ -120,7 +122,18 @@
           <div>
             <h2 class="section-title">Key Features & Challenges</h2>
             <div class="section-content">
-              <p></p>
+              <p>
+                The primary challenge with this project was implementing the
+                design within the constraints of Titan CMS. The page displays
+                data from a variety of sources, all of which needed to be styled
+                to fit the design.
+              </p>
+              <p>
+                Additionally, I chose to create animated widgets to display
+                certain data types. These had to be configured in such a way
+                that updating the data only required updating the inner text of
+                the html, without touching any of the other widget code.
+              </p>
             </div>
           </div>
         </section>
@@ -149,6 +162,53 @@
         </section>
       </div>
     </article>
+    <a href="#skipID" class="page-nav-anchor-link">Go to Top</a>
+    <br />
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <div class="link-container">
+            <a
+              href="https://www.linkedin.com/in/paulagbewick/"
+              target="_blank"
+              class="social-link"
+              title="LinkedIn"
+              ><img
+                class="icon"
+                src="/assets/svgs/icons/linkedin-basic.svg"
+                alt="LinkedIn logo link"
+            /></a>
+          </div>
+
+          <div class="link-container">
+            <a
+              href="https://github.com/PaulaBewick"
+              target="_blank"
+              class="social-link"
+              title="GitHub"
+              ><img
+                class="icon"
+                src="/assets/svgs/icons/github-basic.svg"
+                alt="GitHub logo link"
+            /></a>
+          </div>
+
+          <div class="link-container">
+            <a
+              href="https://codepen.io/PaulaBewick/"
+              target="_blank"
+              class="social-link"
+              title="CodePen"
+              ><img
+                class="icon"
+                src="/assets/svgs/icons/codepen-basic.svg"
+                alt="CodePen logo link"
+            /></a>
+          </div>
+        </div>
+        <p class="footer-copyright">© Paula Bewick 2023</p>
+      </div>
+    </footer>
     <script src="/js/theme.js"></script>
     <script src="/js/animations.js"></script>
   </body>

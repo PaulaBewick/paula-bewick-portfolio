@@ -111,6 +111,10 @@ canvas {
   color: var(--color-main-bright-transparent);
 }
 
+.skill-icon {
+  line-height: 0;
+}
+
 .skill-icon i {
   font-size: 3rem;
   display: inline-block;
@@ -169,6 +173,9 @@ h3.project-name {
   .page-header,
   .hero-title {
     padding: 0;
+  }
+  .icon-grid {
+    grid-template-columns: repeat(2, minmax(1rem, 1fr));
   }
 }
 

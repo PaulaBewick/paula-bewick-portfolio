@@ -1,4 +1,7 @@
 :root {
+  --font-family-primary: "Josefin Sans", "Century Gothic", sans-serif;
+  --font-family-forms: sans-serif;
+
   --color-main-dark: #0f2940;
   --color-main-deep: #004f6b;
   --color-main-medium: #1a8199;
@@ -8,6 +11,7 @@
   --color-main-light-transparent: rgb(126, 219, 237, 0.6);
   --color-main-tint: #e1e1ff;
   --color-dark: #1a1a1a;
+  --color-black: #1a1a1a;
   --color-white: #fff;
   --color-pink: #f2b8c2;
   --color-pink-transparent: rgb(242, 184, 194, 0.6);
@@ -157,7 +161,6 @@ a {
   color: var(--primary-color);
 }
 p {
-  /* white-space: pre-line; */
   font-size: 1rem;
   font-size: calc(1rem + 0.2vw);
   margin: 1.5rem 0;
@@ -231,6 +234,24 @@ page-header {
   align-items: center;
   float: inline-end;
 }
+
+.toggle-rounded .material-icons {
+  position: absolute;
+  z-index: -10;
+  margin-left: 28px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--color-main-light-transparent);
+  transition: all 0.5s ease;
+}
+
+input:checked + .toggle-rounded .material-icons {
+  z-index: 10;
+  color: var(--color-white);
+  transition: all 0.5s ease;
+  transform: rotateZ(100deg);
+}
+
 .theme-toggle-button-container em {
   margin-left: 10px;
   font-size: 1rem;
@@ -255,11 +276,7 @@ page-header {
   transition: 0.4s;
   border-radius: 2rem;
 }
-/* .toggle-rounded:focus {
-  background-color: var(--primary-color);
-  transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
-} */
+
 .toggle-rounded:before {
   background-color: var(--color-white);
   bottom: 4px;
@@ -269,17 +286,31 @@ page-header {
   position: absolute;
   transition: 0.4s;
   width: 26px;
-  border-radius: 2rem;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 5px 1px 8px -1px #fff,
+    inset -8px -8px 1px 0.5px var(--color-white);
+  -webkit-box-shadow: 5px 1px 8px -1px #fff,
+    inset -8px -8px 1px 0.5px var(--color-white);
+  border-collapse: separate;
 }
 
 input:checked + .toggle-rounded {
   background-color: var(--color-main-light);
 }
 input:focus + .toggle-rounded {
-  background-color: var(--color-purple);
+  background-color: var(--color-main-bright);
+  box-shadow: 0 0 10px -1px var(--color-main-bright);
 }
 input:checked + .toggle-rounded:before {
   transform: translateX(26px);
+  box-shadow: none;
+  background: radial-gradient(
+    closest-side,
+    var(--color-main-light-transparent),
+    #fff,
+    var(--color-main-light-transparent)
+  );
 }
 article {
   margin-top: 2rem;

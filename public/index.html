@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Paula Bewick</title>
-    <link rel="icon" type="image/x-icon" href="/assets/svgs/icons/sparkle" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/svgs/icons/sparkle/favicon-16x16.png"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Josefin+Sans:wght@100;200;400;700&display=swap");
     </style>
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
     />
     <link
       rel="stylesheet"
@@ -69,7 +73,6 @@
             WordPress (8 years!) and my next horizon is learning Typescript and
             React/Next.js.
           </p>
-          <!-- I've had the opportunity to learn from some amazing people along this journey, and I enjoy working both collaboratively and independently. -->
           <span class="link-container">
             <a
               href="https://www.linkedin.com/in/paulagbewick/"
@@ -126,7 +129,9 @@
                 id="switch"
                 name="theme"
               />
-              <span class="toggle-rounded"></span>
+                <span class="toggle-rounded">
+                <span class="material-icons light-mode-icon"> brightness_5 </span>
+              </span>
             </label>
           </div>
         </div>
@@ -208,18 +213,6 @@
               ></span>
               <p>Figma</p>
             </li>
-            <!-- <li class="skill-title">
-              <span class="skill-icon" aria-hidden="true">
-                <i class="devicon-codepen-plain"></i
-              ></span>
-              <p>CodePen</p>
-            </li>
-            <li class="skill-title">
-              <span class="skill-icon" aria-hidden="true">
-                <i class="devicon-github-original"></i
-              ></span>
-              <p>GitHub</p>
-            </li> -->
           </ul>
           <p class="flex-centered">
             Always learning! Here's what I am currently working on.
@@ -283,7 +276,7 @@
                 Video checkpointing tool built for Titan CMS. Made using HTML,
                 CSS, XSL, and JavaScript. Fully functional CRUD app created in
                 collaboration with back-end developer. Responsive and
-                accessibile across devices.
+                accessible across devices.
               </p>
               <p>
                 <a
@@ -304,7 +297,86 @@
               /></a>
             </div>
           </div>
+
+          <div class="project-card flex-container">
+            <div class="project-info flex-50 reveal fade-bottom fade-left">
+              <h3 class="project-name">NASA Birthday</h3>
+              <p class="project-description">
+                Personal project inspired by my love of space. Made using HTML,
+                CSS, JavaScript, and NASA's Astronomy Picture of the Day REST API.
+                Responsive and accessible across devices.
+              </p>
+              <p>
+                <a
+                  href="/pages/projects/nasa-birthday/nasa-birthday.html"
+                  class="link gradient-underline-link"
+                  >Visit</a
+                >
+              </p>
+            </div>
+            <div class="project-info flex-50 reveal fade-bottom fade-right">
+              <a
+                href="/pages/projects/nasa-birthday/nasa-birthday.html"
+                title="NASA Birthday"
+                ><img
+                  class="project-image"
+                  src="/assets/images/laptop-nasa-bday.png"
+                  alt="screen capture of NASA birthday"
+              /></a>
+            </div>
+          </div>
         </div>
+
+        <div class="project-card flex-container">
+          <div class="project-info flex-50 reveal fade-bottom fade-right">
+            <h3 class="project-name">Paula Loomis Art</h3>
+            <p class="project-description">
+              Website for my personal fine art portfolio. This was one of my first complete website projects, built in 2018 with WordPress and hosted on my personal domain.
+            </p>
+            <p>
+              <a
+                href="https://paulaloomisart.com/"
+                class="link gradient-underline-link"
+                >Visit</a
+              >
+            </p>
+          </div>
+          <div class="project-info flex-50 reveal fade-bottom fade-left">
+            <a
+              href="https://paulaloomisart.com/"
+              title="Paula Loomis Art"
+              ><img
+                class="project-image"
+                src="/assets/images/laptop-pla.png"
+                alt="screen capture of paulaloomisart.com"
+            /></a>
+          </div>
+        </div>
+
+        <div class="project-card flex-container">
+          <div class="project-info flex-50 reveal fade-bottom fade-left">
+            <h3 class="project-name">Reforestation Org</h3>
+            <p class="project-description">
+              Website design and development currently in progress for a freelance client. Site made using React, Node.js, and Typescript. Headless CMS created for client using Directus. Mobile prototype designed in Figma. Responsive and accessible across devices.
+            </p>
+            <p>
+              <a
+                href="/"
+                class="link gradient-underline-link"
+                >Coming Soon!</a
+              >
+            </p>
+          </div>
+          <div class="project-info flex-50 reveal fade-bottom fade-right">
+              <img
+                class="project-image"
+                src="/assets/images/laptop-reforestation.png"
+                alt="screen capture of reforestation org website"
+            />
+          </div>
+        </div>
+      </div>
+
       </section>
       <a href="#skipID" class="page-nav-anchor-link">Go to Top</a>
       <div class="spacer"></div>
@@ -354,8 +426,8 @@
         <p class="footer-copyright">© Paula Bewick 2023</p>
       </div>
     </footer>
-    <script src="/js/canvas.js"></script>
     <script src="/js/theme.js"></script>
+    <script src="/js/canvas.js"></script>
     <script src="/js/animations.js"></script>
     <script type="module">
       // Import the functions you need from the SDKs you need

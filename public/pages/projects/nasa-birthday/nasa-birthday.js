@@ -1,8 +1,11 @@
 var day30 = document.getElementById("day30");
 var day31 = document.getElementById("day31");
 
-var month = document.getElementById("month");
-var day = document.getElementById("day");
+const monthDropdown = document.querySelector("#monthDropdown");
+const dayDropdown = document.querySelector("#dayDropdown");
+
+let month = "";
+let day = "";
 
 const months = {
   January: "01",
@@ -36,35 +39,55 @@ const daysInMonths = {
 
 function populateDays(month) {
   if (month == "February") {
-    day30.hidden = true;
-    day31.hidden = true;
+    day30.classList.add("hidden");
+    day31.classList.add("hidden");
+    // day30.hidden = true;
+    // day31.hidden = true;
   } else if (daysInMonths[month] == 30) {
-    day30.hidden = false;
-    day31.hidden = true;
+    day30.classList.remove("hidden");
+    day31.classList.add("hidden");
+    // day30.hidden = false;
+    // day31.hidden = true;
   } else {
-    day30.hidden = false;
-    day31.hidden = false;
+    day30.classList.remove("hidden");
+    day31.classList.remove("hidden");
+    // day30.hidden = false;
+    // day31.hidden = false;
   }
 }
 
 let currentBirthday = "";
 
 function updateBirthday() {
-  let year = Math.floor(Math.random() * (2022 - 1996 + 1)) + 1996;
-  let yourMonth = months[month.options[month.selectedIndex].value];
-  // console.log(yourMonth);
-  let yourDay = ("0" + day.options[day.selectedIndex].value).slice(-2);
-  // console.log(yourDay);
+  if (day.length > 0) {
+    let yourDay = ("0" + day).slice(-2);
 
-  if (yourMonth == "02" || yourDay == 29) {
-    year = 2008;
+    // let yourMonth = months[month.options[month.selectedIndex].value];
+    let yourMonth = months[month];
+
+    // let yourDay = ("0" + day.options[day.selectedIndex].value).slice(-2);
+    let year = Math.floor(Math.random() * (2022 - 1996 + 1)) + 1996;
+
+    if (yourMonth == "02" || yourDay == 29) {
+      year = 2008;
+    }
+    let birthday = `${year}-${yourMonth}-${yourDay}`;
+    return birthday;
   }
-  let birthday = `${year}-${yourMonth}-${yourDay}`;
-  return birthday;
 }
 
 function checkBirthday() {
-  if (!month.value || !day.value) {
+  // if (!month.value || !day.value) {
+  //   return;
+  // }
+  // if (!month || !day) {
+  //   return;
+  // }
+  if (
+    !day.length > 0 ||
+    dayDropdown.children[0].innerText == "DAY" ||
+    !month.length > 0
+  ) {
     return;
   }
   let updatedBirthday = updateBirthday();
@@ -74,17 +97,29 @@ function checkBirthday() {
   }
 }
 
-month.addEventListener("change", (e) => {
-  e.preventDefault();
-  yourDay = day.options.selectedIndex = "0";
-  populateDays(e.target.value);
+monthDropdown.addEventListener("change", (e) => {
+  dayDropdown.children[0].innerText = "DAY";
+  month = e.target.innerText;
+  populateDays(month);
   checkBirthday();
 });
 
-day.addEventListener("change", (e) => {
-  e.preventDefault();
+dayDropdown.addEventListener("change", (e) => {
+  day = e.target.innerText;
   checkBirthday();
 });
+
+// month.addEventListener("change", (e) => {
+//   e.preventDefault();
+//   yourDay = day.options.selectedIndex = "0";
+//   populateDays(e.target.value);
+//   checkBirthday();
+// });
+
+// day.addEventListener("change", (e) => {
+//   e.preventDefault();
+//   checkBirthday();
+// });
 
 const nasaUrl = "https://api.nasa.gov/planetary/apod?api_key=";
 const apiKey = "gM26T2mHGZnfJauqVf3DIGnVp1N327ULC23ChufV";
@@ -138,6 +173,10 @@ function getSpacePhoto() {
 
     date.innerHTML = data.date;
 
+    const container = document.querySelector(".birthday-results");
+
+    container.classList.add("plain-background");
+
     if (data.media_type == "video") {
       mediaResult.innerHTML = videoSection;
       document.getElementById("videoLink").src = data.url;
@@ -146,6 +185,7 @@ function getSpacePhoto() {
       document.getElementById("hdimg").href = data.hdurl;
       document.getElementById("image_of_the_day").src = data.url;
     }
+
     let explanationString = data.explanation.replace(/ {1,}/g, " ");
     let sentences = explanationString.split(
       /((?<=[.!?])(?<!ie\.|eg\.)(?<!U\.S\.A\.)\s+(?=[A-Z]))/
@@ -155,14 +195,17 @@ function getSpacePhoto() {
       return /\S/.test(element);
     });
 
-    console.log(sentences);
+    // console.log(sentences);
     let firstTwoSentences = sentences.slice(0, 2);
     let firstThreeSentences = sentences.slice(0, 3);
 
     let wordCount = firstTwoSentences.join(" ").split(/\s+/).length;
     let wordCountThree = firstThreeSentences.join(" ").split(/\s+/).length;
 
-    if (sentences.length >= 3 && wordCountThree <= 45) {
+    if (explanationString.includes("Tomorrow's picture:")) {
+      information.innerHTML =
+        "Discover the cosmos! Each day NASA features a different image or photograph of our fascinating universe.";
+    } else if (sentences.length >= 3 && wordCountThree <= 45) {
       information.innerHTML = firstThreeSentences.join(" ") + " ";
     } else if (sentences.length >= 2 && wordCount <= 45) {
       information.innerHTML = firstTwoSentences.join(" ") + " ";
@@ -172,7 +215,3 @@ function getSpacePhoto() {
   }
   fetchData();
 }
-
-window.onload = function () {
-  document.getElementById("birthday-form").reset();
-};
