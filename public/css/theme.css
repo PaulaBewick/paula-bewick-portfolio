@@ -238,9 +238,9 @@ page-header {
 .toggle-rounded .material-icons {
   position: absolute;
   z-index: -10;
-  margin-left: 28px;
-  font-size: 1.5rem;
-  line-height: 1.2;
+  margin-left: 30px;
+  font-size: 25px;
+  line-height: 35px;
   color: var(--color-main-light-transparent);
   transition: all 0.5s ease;
 }
@@ -415,6 +415,7 @@ img .gradient-link {
   cursor: pointer;
   position: relative;
   margin-right: 2rem;
+  height: 2.5rem;
 }
 
 .gradient-link::before {
@@ -502,6 +503,32 @@ img .gradient-link {
 
 .active.fade-bottom {
   animation: fade-bottom 1s ease-in;
+}
+
+/* fallback */
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/materialicons/v139/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+    format("woff2");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
 }
 
 @keyframes fade-bottom {
