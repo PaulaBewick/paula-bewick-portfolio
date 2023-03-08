@@ -78,8 +78,13 @@ body {
 }
 
 .spacer {
+  /* padding: calc(5% - 3vw); */
   padding: calc(5%);
   max-width: 100%;
+}
+
+.footer .spacer {
+  padding: calc(5% - 3vw);
 }
 
 .svg-gradient {
@@ -392,6 +397,14 @@ input[type="reset"] {
   background: var(--color-main-bright);
   color: var(--color-dark);
 }
+
+.link-placeholder {
+  font-weight: bold;
+  font-size: calc(1rem + 0.2vw);
+  border: 0;
+  color: var(--primary-color);
+}
+
 .link {
   display: inline-block;
   font-weight: bold;
