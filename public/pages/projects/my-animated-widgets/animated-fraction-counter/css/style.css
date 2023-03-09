@@ -1,0 +1,117 @@
+html,
+body {
+  background: #f2f2f2;
+}
+
+.animated-card-label {
+  font-weight: normal;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem;
+  color: var(--heading-color);
+}
+
+.AnimatedFractionCounters {
+  height: 100%;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: var(--color-white);
+}
+
+.fraction-card-title {
+  text-align: center;
+  color: var(--color-main-bright);
+  margin: 1rem;
+}
+
+.fraction-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.counter-card {
+  background: var(--color-white);
+  margin: 2rem;
+  text-align: center;
+  box-shadow: 0 0 1rem 1px lightgrey;
+  min-width: 20rem;
+  max-width: fit-content;
+}
+
+.fraction-counters {
+  display: flex;
+  justify-content: center;
+  /* background: var(--bg-color); */
+  margin: 2rem;
+  font-family: "Montserrat", Arial;
+}
+
+.counter-number {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  height: 3rem;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0.5rem 0.5rem;
+}
+
+.counter-number > span {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  line-height: 1;
+}
+
+.counter-number > span span {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.counter-number > span {
+  transition-delay: 1s;
+}
+
+.fraction-1,
+.fraction-2 {
+  color: var(--color-main-bright);
+}
+
+.fraction-total {
+  margin-top: 2rem;
+}
+
+p.fraction-divider {
+  position: relative;
+  display: flex;
+  /*   overflow: hidden; */
+  align-items: center;
+  height: 3rem;
+  font-size: 3rem;
+  margin: 1rem 0rem 0.5rem;
+  color: var(--color-main-medium);
+}
+
+p.fraction-label {
+  font-size: 2rem;
+  margin: 1rem;
+  color: var(--color-main-medium);
+}
+
+@media (min-width: 768px) {
+  .fraction-counter {
+    flex-direction: row;
+  }
+}

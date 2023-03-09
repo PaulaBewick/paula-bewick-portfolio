@@ -94,49 +94,22 @@ dialsReady(".svg-dials", (elements) => {
       }
       requestAnimationFrame(step);
     }
+
+    // sets the dial colors based on utilization %
+    // red for too high, yellow for too low, green for good
     function setColor(perc) {
       let percent = perc * 100;
-      let gradientId = "gradient" + Math.round(percent);
-      // create a gradient element
-      let gradient = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "radialGradient"
-      );
-      gradient.setAttribute("id", gradientId);
-      gradient.setAttribute("cx", "60%");
-      gradient.setAttribute("cy", "140%");
-      gradient.setAttribute("r", "170%");
-      gradient.setAttribute("fx", "100%");
-      gradient.setAttribute("fy", "100%");
-      // add the gradient to the svg
-      mySvg.appendChild(gradient);
-
-      // create and append the gradient stops
-      let stop1 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "stop"
-      );
-      stop1.setAttribute("offset", "0%");
-      stop1.setAttribute("stop-color", "var(--color-aqua)");
-      gradient.appendChild(stop1);
-
-      let stop3 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "stop"
-      );
-      stop3.setAttribute("offset", "60%");
-      stop3.setAttribute("stop-color", "var(--color-pink)");
-      gradient.appendChild(stop3);
-
-      let stop4 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "stop"
-      );
-      stop4.setAttribute("offset", "100%");
-      stop4.setAttribute("stop-color", "var(--color-main-tint)");
-      gradient.appendChild(stop4);
-
-      color = "url(#" + gradientId + ")";
+      switch (true) {
+        case percent < 75:
+          color = "#a93928";
+          break;
+        case percent >= 75 && percent <= 90:
+          color = "#86aa3f";
+          break;
+        case percent > 90:
+          color = "#ddb027";
+          break;
+      }
       circle.setAttribute("stroke", color);
     }
   });
