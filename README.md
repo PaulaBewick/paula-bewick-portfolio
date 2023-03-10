@@ -1,4 +1,4 @@
-# paulabewick.com
+# www.paulabewick.com
 Design for my portfolio website
 
 --- 
